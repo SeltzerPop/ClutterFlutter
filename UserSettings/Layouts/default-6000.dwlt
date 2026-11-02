@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 552
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,14 +121,14 @@ MonoBehaviour:
     y: 552
     width: 1466
     height: 381
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -604,23 +604,23 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\eplatt000.ITCS\Documents\GitHub\ClutterFlutter
+  m_LastProjectPath: C:\Users\eplatt000\Documents\GitHub\ClutterFlutter
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 68840
+    - m_Data: 77912
     m_LastClickedID:
-      m_Data: 68840
+      m_Data: 77912
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 68840
-    - m_Data: 72084
-    - m_Data: 74438
+    - m_Data: 68894
+    - m_Data: 72172
+    - m_Data: 74582
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -681,8 +681,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -114262
-    m_LastClickedInstanceID: -114262
+    - m_Data: 85030
+    m_LastClickedInstanceID: 85030
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 73862
@@ -760,7 +760,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 299
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -807,47 +807,64 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs:
-      - m_Data: -114262
+      m_SelectedIDs: []
       m_LastClickedID:
-        m_Data: -114262
+        m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -114262
-      - m_Data: -114222
-      - m_Data: -114220
-      - m_Data: -110114
-      - m_Data: -109850
-      - m_Data: -109158
-      - m_Data: -109156
-      - m_Data: -108752
-      - m_Data: -108750
-      - m_Data: -108340
-      - m_Data: -108090
-      - m_Data: -108084
-      - m_Data: -107824
-      - m_Data: -107800
-      - m_Data: -107424
-      - m_Data: -107422
-      - m_Data: -107058
-      - m_Data: -107056
-      - m_Data: -106704
-      - m_Data: -106662
-      - m_Data: -106296
-      - m_Data: -106282
-      - m_Data: -104812
-      - m_Data: -104788
-      - m_Data: -103252
-      - m_Data: -103238
-      - m_Data: -99404
-      - m_Data: -99146
-      - m_Data: -99126
-      - m_Data: -76878
-      - m_Data: -76858
-      - m_Data: -76612
-      - m_Data: -76118
-      - m_Data: -75828
-      - m_Data: -63752
+      - m_Data: -97274
+      - m_Data: -95802
+      - m_Data: -94656
+      - m_Data: -94642
+      - m_Data: -94352
+      - m_Data: -91608
+      - m_Data: -91588
+      - m_Data: -90616
+      - m_Data: -90334
+      - m_Data: -90304
+      - m_Data: -90034
+      - m_Data: -89996
+      - m_Data: -89994
+      - m_Data: -89776
+      - m_Data: -89754
+      - m_Data: -89752
+      - m_Data: -89452
+      - m_Data: -89450
+      - m_Data: -89202
+      - m_Data: -89166
+      - m_Data: -88864
+      - m_Data: -88862
+      - m_Data: -87966
+      - m_Data: -87946
+      - m_Data: -87020
+      - m_Data: -87006
+      - m_Data: -85930
+      - m_Data: -83406
+      - m_Data: -83382
+      - m_Data: -78948
+      - m_Data: -78908
+      - m_Data: -77780
+      - m_Data: -74782
+      - m_Data: -74780
+      - m_Data: -74374
+      - m_Data: -74372
+      - m_Data: -74050
+      - m_Data: -74048
+      - m_Data: -72890
+      - m_Data: -72844
+      - m_Data: -71662
+      - m_Data: -71344
+      - m_Data: -71298
+      - m_Data: -71016
+      - m_Data: -70974
+      - m_Data: -70512
+      - m_Data: -70510
+      - m_Data: -65738
+      - m_Data: -65696
+      - m_Data: -64072
       - m_Data: -12
+      - m_Data: 82864
+      - m_Data: 85226
+      - m_Data: 85586
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1370,9 +1387,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 693.85974, y: 325.238, z: -2.261581}
+    m_Target: {x: 445.18674, y: 129.35382, z: -7.903043}
     speed: 2
-    m_Value: {x: 693.85974, y: 325.238, z: -2.261581}
+    m_Value: {x: 445.18674, y: 129.35382, z: -7.903043}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1422,9 +1439,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 227.0273
+    m_Target: 334.88943
     speed: 2
-    m_Value: 227.0273
+    m_Value: 334.88943
   m_Ortho:
     m_Target: 1
     speed: 2

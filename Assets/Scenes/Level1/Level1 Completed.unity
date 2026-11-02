@@ -693,7 +693,7 @@ PrefabInstance:
       objectReference: {fileID: 820833883}
     - target: {fileID: 1616724001731092523, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeSceneDoor
+      value: ChangeSceneOpenDoor
       objectReference: {fileID: 0}
     - target: {fileID: 1733397201831401563, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_Name
@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6475868627950116444, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
+      propertyPath: m_Name
+      value: OpenDoorButton
+      objectReference: {fileID: 0}
     - target: {fileID: 7446277122294980526, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 150
@@ -828,7 +832,9 @@ PrefabInstance:
       value: 137.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8045503811657092388, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
+    - {fileID: 2594848932171257100, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6400890275006098292, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       insertIndex: -1

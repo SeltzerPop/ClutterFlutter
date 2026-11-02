@@ -19,5 +19,15 @@ public class Level1ClutterWallController : MonoBehaviour
         Debug.Log("doorlvl1");
         SceneManager.LoadScene(4);
     }
+    public void ChangeSceneOpenDoor()
+    {
+        Debug.Log("opendoorlvl1");
+        SceneManager.LoadScene(5);
+    }
+    public void ChangeSceneLevel1Complete()
+    {
+        Debug.Log("lvl1complete");
+        SceneManager.LoadScene(6);
+    }
     
 }
