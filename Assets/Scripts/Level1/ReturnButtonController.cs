@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ReturnButtonController : MonoBehaviour
 {
     public bool MoonKey = false;
+    public Button KeyButton;
     public void ReturnLvl1()
     {
         if (MoonKey == false)
@@ -13,13 +15,15 @@ public class ReturnButtonController : MonoBehaviour
         else if (MoonKey == true)
         {
             Debug.Log("completedlvl1");
+            
             SceneManager.LoadScene(6);
         }
     }
     public void MoonKeyCollect()
     {
         Debug.Log("got moon key");
-        bool MoonKey = true;
+        KeyButton.interactable = false;
+        MoonKey = true;
 
     }
 }

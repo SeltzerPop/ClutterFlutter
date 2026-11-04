@@ -63,11 +63,13 @@
     <Compile Include="Assets\Scripts\KeyController.cs" />
     <Compile Include="Assets\Scripts\Dragging Controller.cs" />
     <Compile Include="Assets\Scripts\Main Menu\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Level1\ReturnButtonController.cs" />
     <Compile Include="Assets\Scripts\Main Menu\QuitButtonController.cs" />
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\Main Menu\PlayButtonController.cs" />
     <Compile Include="Assets\Scripts\CursorController.cs" />
+    <Compile Include="Assets\Scripts\Level1\LevelChange.cs" />
     <Compile Include="Assets\Scripts\Level1\Level1ClutterWallController.cs" />
   </ItemGroup>
   <ItemGroup>
