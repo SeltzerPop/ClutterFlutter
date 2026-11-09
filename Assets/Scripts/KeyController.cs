@@ -20,17 +20,18 @@ public class KeyController : MonoBehaviour
     public void MoonKeyCollect()
     {
         Debug.Log("got moon key");
-        bool MoonKey = true;
+         MoonKey = true;
 
     }
     public void SunKeyCollect()
     {
         Debug.Log("got sun key");
-        bool SunKey = true;
+         SunKey = true;
     }
     public void StarKeyCollect()
     {
         Debug.Log("got star key");
-        bool StarKey = true;
+        
+        StarKey = true;
     }
 }
