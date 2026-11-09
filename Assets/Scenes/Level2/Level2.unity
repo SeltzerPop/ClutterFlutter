@@ -497,7 +497,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
       propertyPath: far clip plane
-      value: 800
+      value: 1000.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4319925665701584157, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1107,7 +1123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3155335500995268693, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4321401105921214145, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_Pivot.x
@@ -1139,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4321401105921214145, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 105.3526
+      value: 77.4916
       objectReference: {fileID: 0}
     - target: {fileID: 4321401105921214145, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_LocalScale.x
@@ -1239,7 +1255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7846795043619888719, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8687292849009821413, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_Name
@@ -1247,7 +1263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8687292849009821413, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687292849009821413, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
+      propertyPath: m_TagString
+      value: Interactable Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1279,7 +1299,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1531967774}
+          m_TargetAssemblyTypeName: CursorActions, Assembly-CSharp
+          m_MethodName: OnInteractableCursor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1531967774}
+          m_TargetAssemblyTypeName: CursorActions, Assembly-CSharp
+          m_MethodName: NonInteractableCursor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &2065224519
 PrefabInstance:
   m_ObjectHideFlags: 0
