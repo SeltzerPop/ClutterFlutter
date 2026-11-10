@@ -1099,9 +1099,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1572916286}
+        - m_Target: {fileID: 1572916287}
           m_TargetAssemblyTypeName: CursorActions, Assembly-CSharp
-          m_MethodName: 
+          m_MethodName: OnInteractableCursor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1115,9 +1115,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1572916286}
+        - m_Target: {fileID: 1572916287}
           m_TargetAssemblyTypeName: CursorActions, Assembly-CSharp
-          m_MethodName: 
+          m_MethodName: NonInteractableCursor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1834,6 +1834,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a54d25a484600c04bb7a578bbfabd244, type: 3}
   hotspot: {x: 0, y: 0}
   draggableController: {fileID: 0}
+  keyController: {fileID: 0}
 --- !u!4 &1572916288
 Transform:
   m_ObjectHideFlags: 0

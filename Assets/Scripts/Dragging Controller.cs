@@ -8,9 +8,9 @@ public class DraggingController : MonoBehaviour
     Vector3 rotation = new Vector3 (0,0,10);
     private Vector3 offset;
     [SerializeField] private LayerMask movableLayers;
-    public GameObject[] interactableItems;
     RaycastHit2D hit;
     public bool raycastHit;
+    public bool keyHit;
 
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class DraggingController : MonoBehaviour
     {
         hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, movableLayers);
 
-          if (hit) raycastHit = true;
+          if (hit) raycastHit = true;// I added this so that I can check the raycast from another script - Tati
           else raycastHit = false;
 
 
@@ -27,7 +27,10 @@ public class DraggingController : MonoBehaviour
 
             if (hit)
             {
+                if (hit.transform.CompareTag("Key")) {
+                    keyHit = true;
 
+                }
 
                 if (hit.transform.CompareTag("Can Rotate"))
                 {
@@ -45,6 +48,9 @@ public class DraggingController : MonoBehaviour
 
                         hit.transform.localEulerAngles -= rotation;
                     }
+                }
+                else { 
+                    hit.transform.localEulerAngles = new Vector3(0, 0, 0); //reset rotation if not a rotatable object
                 }
                 if (hit.transform.CompareTag("Can Move"))
                 {

@@ -7,6 +7,7 @@ TagManager:
   - Can Move
   - Can Rotate
   - Interactable Button
+  - Key
   layers:
   - Default
   - TransparentFX

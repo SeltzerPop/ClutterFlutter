@@ -19,11 +19,9 @@ public class CursorActions : MonoBehaviour
     CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot = Vector2.zero;
     public DraggingController draggableController;
+    public KeyController keyController;
 
-    void Start()
-    {
-       
-    }
+
     public void OnInteractableCursor()
     {
         // pulled from Unity Documentation: 
@@ -43,15 +41,22 @@ public class CursorActions : MonoBehaviour
 
     void Update()
     {
-        if (draggableController != null)
+        if (draggableController != null && keyController != null)
         {
             if (draggableController.raycastHit)
             {
                 OnInteractableCursor();
             }
-        else
+            else
             {
                 NonInteractableCursor();
+            }
+
+            if (draggableController.raycastHit) {
+
+                if (draggableController.keyHit) { 
+                    keyController.MoonKeyCollect();
+                }
             }
         }
        
