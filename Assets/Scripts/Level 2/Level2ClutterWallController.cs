@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Level1ClutterWallController : MonoBehaviour
+public class Level2ClutterWallController1: MonoBehaviour
 {
     // each change scene refers to the button in level 1 scene
     public void ChangeSceneRightWall()

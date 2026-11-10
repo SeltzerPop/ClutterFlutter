@@ -1,8 +1,5 @@
-using NUnit.Framework;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class CursorActions : MonoBehaviour
 {
@@ -21,43 +18,47 @@ public class CursorActions : MonoBehaviour
     public Texture2D[] cursorSprites;
     CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot = Vector2.zero;
+    public DraggingController draggableController;
 
-    public LayerMask UI;
-
-
-    public void OnInteractableCursor() {
+    void Start()
+    {
+       
+    }
+    public void OnInteractableCursor()
+    {
         // pulled from Unity Documentation: 
         //https://docs.unity.com/en-us/engine/6000.0/script-reference/unityengine/cursor/setcursor
 
-        //increase size of cursor 
+        //change cursor sprite to yellow highlighted outline
 
-        Cursor.SetCursor(cursorSprites[1],hotspot,cursorMode);
+        
+        Cursor.SetCursor(cursorSprites[1], hotspot, cursorMode);
 
     }
-    public void NonInteractableCursor() {
-        Cursor.SetCursor(cursorSprites[0],hotspot,cursorMode);
-    }
-    public void OnRaycastUI()
+    public void NonInteractableCursor()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, UI);
+        // turn off the yellow highlighted outline and return to default cursor sprite
+        Cursor.SetCursor(cursorSprites[0], hotspot, cursorMode);
+    }
 
-        if (hit)
+    void Update()
+    {
+        if (draggableController != null)
         {
-            if (hit.transform.CompareTag("Interactable Button"))
+            if (draggableController.raycastHit)
             {
-                print("");
                 OnInteractableCursor();
             }
-            else
+        else
             {
                 NonInteractableCursor();
             }
         }
        
+        //if (EventSystem.current.)
+        //{
+        //    print("Working");
+        //}
 
-    }
-    public void OnCursorClick()
-    {
-        
     }
 }

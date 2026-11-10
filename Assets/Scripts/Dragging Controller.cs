@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.DualShock.LowLevel;
 using UnityEngine.UIElements;
 
 public class DraggingController : MonoBehaviour
@@ -8,8 +9,8 @@ public class DraggingController : MonoBehaviour
     private Vector3 offset;
     [SerializeField] private LayerMask movableLayers;
     public GameObject[] interactableItems;
-    public CursorActions cursorActions;
     RaycastHit2D hit;
+    public bool raycastHit;
 
 
     // Update is called once per frame
@@ -17,21 +18,22 @@ public class DraggingController : MonoBehaviour
     {
         hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, movableLayers);
 
-        RaycastCursorActions();
-   
+          if (hit) raycastHit = true;
+          else raycastHit = false;
+
 
         if (Input.GetMouseButtonDown(0)) //if mouse is clicked on moveable object 
         {
-            
+
             if (hit)
             {
-                
+
 
                 if (hit.transform.CompareTag("Can Rotate"))
                 {
 
                     //rotate object on the z axis
-                    if (Input.mousePosition.x<hit.transform.position.x)
+                    if (Input.mousePosition.x < hit.transform.position.x)
                     {
 
 
@@ -43,11 +45,11 @@ public class DraggingController : MonoBehaviour
 
                         hit.transform.localEulerAngles -= rotation;
                     }
-                    }
+                }
                 if (hit.transform.CompareTag("Can Move"))
-                    {
-                        dragging = hit.transform;
-                        offset = dragging.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                {
+                    dragging = hit.transform;
+                    offset = dragging.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 }
             }
         }
@@ -61,17 +63,5 @@ public class DraggingController : MonoBehaviour
         }
     }
 
-    void RaycastCursorActions() {
-        if (hit)
-        {
-            /*
-             * Change cursor sprite when hovering over interactable objects
-             */
-            cursorActions.OnInteractableCursor();
-        }
-        else
-        {
-            cursorActions.NonInteractableCursor();
-        }
-    }
+  
 }
