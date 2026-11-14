@@ -720,10 +720,10 @@ PrefabInstance:
     - target: {fileID: 1616724001731092523, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 820833883}
     - target: {fileID: 1616724001731092523, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeSceneDoor
+      value: OpenLevel2
       objectReference: {fileID: 0}
     - target: {fileID: 1733397201831401563, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       propertyPath: m_Name

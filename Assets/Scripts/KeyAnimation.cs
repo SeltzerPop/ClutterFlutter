@@ -8,7 +8,6 @@ public class KeyAnimation : MonoBehaviour
 
     public DraggingController keyController;
     Animator animator;
-    bool startAnim = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

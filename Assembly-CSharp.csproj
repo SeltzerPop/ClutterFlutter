@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\Main Menu\PlayButtonController.cs" />
     <Compile Include="Assets\Scripts\CursorController.cs" />
+    <Compile Include="Assets\Scripts\Level 2\Scene Transition.cs" />
     <Compile Include="Assets\Scripts\Level1\LevelChange.cs" />
     <Compile Include="Assets\Scripts\Level1\Level1ClutterWallController.cs" />
     <Compile Include="Assets\Scripts\DoNotDestroy.cs" />

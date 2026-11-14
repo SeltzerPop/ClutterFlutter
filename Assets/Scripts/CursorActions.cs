@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class CursorActions : MonoBehaviour
 {
@@ -21,7 +22,17 @@ public class CursorActions : MonoBehaviour
     public DraggingController draggableController;
     public KeyController keyController;
 
+    void Start()
+    {
+        if (GameObject.Find("Dragging Controller") != false) { 
+            draggableController = GameObject.Find("Dragging Controller").GetComponent<DraggingController>();
+        }
 
+        if (GameObject.Find("Key Controller") != false)
+        {
+            keyController = GameObject.Find("Key Controller").GetComponent<KeyController>();
+        }
+    }
     public void OnInteractableCursor()
     {
         // pulled from Unity Documentation: 
@@ -41,18 +52,19 @@ public class CursorActions : MonoBehaviour
 
     void Update()
     {
-        if (draggableController != null && keyController != null)
+        if (draggableController != null)
         {
             if (draggableController.raycastHit)
             {
                 OnInteractableCursor();
+                print("Detecting item");
             }
             else
             {
                 NonInteractableCursor();
             }
 
-            if (draggableController.raycastHit) {
+            if (draggableController.raycastHit && keyController != null) {
 
                 if (draggableController.keyHit) { 
                     keyController.MoonKeyCollect();
