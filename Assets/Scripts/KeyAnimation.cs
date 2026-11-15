@@ -12,13 +12,11 @@ public class KeyAnimation : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (keyController == null)
+        if (GameObject.Find("Dragging Controller") != false)
         {
-            return;
+            keyController = GameObject.Find("Dragging Controller").GetComponent<DraggingController>();
         }
-        else { 
-            animator = GetComponent<Animator>();
-        }
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

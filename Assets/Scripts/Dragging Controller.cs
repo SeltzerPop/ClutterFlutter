@@ -18,6 +18,8 @@ public class DraggingController : MonoBehaviour
     {
         hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, movableLayers);
 
+        if (hit.collider != null) Debug.Log(hit.collider.name);
+
           if (hit) raycastHit = true;// I added this so that I can check the raycast from another script - Tati
           else raycastHit = false;
 

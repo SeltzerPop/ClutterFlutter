@@ -57,7 +57,6 @@ public class CursorActions : MonoBehaviour
             if (draggableController.raycastHit)
             {
                 OnInteractableCursor();
-                print("Detecting item");
             }
             else
             {
@@ -66,8 +65,12 @@ public class CursorActions : MonoBehaviour
 
             if (draggableController.raycastHit && keyController != null) {
 
-                if (draggableController.keyHit) { 
+                if (draggableController.keyHit && !keyController.MoonKey) { 
                     keyController.MoonKeyCollect();
+                }
+                if (draggableController.keyHit && !keyController.SunKey)
+                {
+                    keyController.SunKeyCollect();
                 }
             }
         }
