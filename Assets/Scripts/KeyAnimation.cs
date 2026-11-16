@@ -24,15 +24,15 @@ public class KeyAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        KeyControllerCollect();
+        if (keyController.keyHit)
+        {
+            KeyControllerCollect();
+        }
     }
 
     void KeyControllerCollect() {
-        if (keyController.keyHit) { 
-          
-            StartCoroutine(KeyPulseAnimation());
-
-        }
+        
+           StartCoroutine(KeyPulseAnimation());
 
     }
 
