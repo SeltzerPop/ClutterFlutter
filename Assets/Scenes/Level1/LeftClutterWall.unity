@@ -637,11 +637,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!224 &207529697 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6400890275006098292, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
-  m_PrefabInstance: {fileID: 1696091703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &223998529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,15 +2817,15 @@ RectTransform:
   m_GameObject: {fileID: 595108018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.06}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 207529697}
+  m_Father: {fileID: 823975252}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.4, y: 128.7}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -544.38116, y: -251.48282}
+  m_SizeDelta: {x: 53.7313, y: 46.5347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595108020
 MonoBehaviour:
@@ -5965,10 +5960,7 @@ PrefabInstance:
     - {fileID: 2594848932171257100, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
     - {fileID: 6475868627950116444, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
     - {fileID: 8045503811657092388, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6400890275006098292, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 595108019}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
 --- !u!1 &1763421136
@@ -7339,6 +7331,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6400890275006098292, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1777142200}
+    - targetCorrespondingSourceObject: {fileID: 6400890275006098292, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 595108019}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cce5661b0fbcbf40aede572343132c2, type: 3}
 --- !u!1 &2069918896
