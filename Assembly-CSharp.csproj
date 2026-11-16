@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Level1\ReturnButtonController.cs" />
     <Compile Include="Assets\Scripts\CursorActions.cs" />
     <Compile Include="Assets\Scripts\Main Menu\QuitButtonController.cs" />
+    <Compile Include="Assets\Scripts\MoveBackToOrigin.cs" />
     <Compile Include="Assets\Scripts\Scene Transition.cs" />
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\Main Menu\PlayButtonController.cs" />

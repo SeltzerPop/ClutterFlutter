@@ -6,7 +6,7 @@ public class DraggingController : MonoBehaviour
     Vector3 rotation = new Vector3 (0,0,10);
     private Vector3 offset;
     [SerializeField] private LayerMask movableLayers;
-    RaycastHit2D hit;
+    public RaycastHit2D hit;
     public bool raycastHit;
     public bool keyHit;
 
@@ -16,7 +16,6 @@ public class DraggingController : MonoBehaviour
     {
         hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, float.PositiveInfinity, movableLayers);
 
-        if (hit.collider != null) Debug.Log(hit.collider.name);
 
           if (hit) raycastHit = true;// I added this so that I can check the raycast from another script - Tati
           else raycastHit = false;
