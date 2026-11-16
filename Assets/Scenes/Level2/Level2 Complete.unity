@@ -1712,13 +1712,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
   targetScene:
-  - {fileID: 102900000, guid: 815feb1fe569da641ac358cdfef760b1, type: 3}
-  - {fileID: 102900000, guid: 0f06b1bf9978a19418217886c04a61c8, type: 3}
-  - {fileID: 102900000, guid: bc3783427b8aecf428ad3ebe7b993c2a, type: 3}
-  - {fileID: 102900000, guid: a742e6f2858cdd841973b4a178d082ec, type: 3}
-  - {fileID: 102900000, guid: b6db3efcee097a445a5f0eb68ea8b2bf, type: 3}
-  - {fileID: 102900000, guid: 23b3e78571e83324ca864e06d8130093, type: 3}
-  - {fileID: 102900000, guid: b5c388080a8830040a625f478b02f677, type: 3}
+  - Level3 Door
+  - Level3 Left Wall
+  - Level3 Right Wall
+  - Level2
+  - Level2 Complete
+  - Level3
+  - Level3 Complete
   keyController: {fileID: 0}
 --- !u!4 &2038413778
 Transform:

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.DualShock.LowLevel;
-using UnityEngine.UIElements;
 
 public class DraggingController : MonoBehaviour
 {

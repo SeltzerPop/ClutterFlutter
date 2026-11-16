@@ -65,10 +65,10 @@ public class CursorActions : MonoBehaviour
 
             if (draggableController.raycastHit && keyController != null) {
 
-                if (draggableController.keyHit && !keyController.MoonKey) { 
+                if (SceneManager.GetSceneByName("RightClutterWall").isLoaded && draggableController.keyHit && !keyController.MoonKey) { 
                     keyController.MoonKeyCollect();
                 }
-                if (draggableController.keyHit && !keyController.SunKey)
+                if (SceneManager.GetSceneByName("LeftClutterWallLvl2").isLoaded && draggableController.keyHit && !keyController.SunKey)
                 {
                     keyController.SunKeyCollect();
                 }

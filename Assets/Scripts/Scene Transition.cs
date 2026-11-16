@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
-    public SceneAsset[] targetScene;
+    
+    public string[] targetScene;
     public KeyController keyController;
 
     void Start()
@@ -16,16 +17,16 @@ public class SceneTransition : MonoBehaviour
     public void DoorScene()
     {
         
-       SceneManager.LoadScene(targetScene[0].name); 
+       SceneManager.LoadScene(targetScene[0]); 
     }
 
     public void LeftClutterWall() {
-        SceneManager.LoadScene(targetScene[1].name);
+        SceneManager.LoadScene(targetScene[1]);
 
     }
 
     public void RightClutterWall() {
-        SceneManager.LoadScene(targetScene[2].name);
+        SceneManager.LoadScene(targetScene[2]);
     }
 
     public void ExitToLevel2 (){ 
@@ -33,15 +34,15 @@ public class SceneTransition : MonoBehaviour
         {
             if (keyController.SunKey)
             {
-                SceneManager.LoadScene(targetScene[4].name);
+                SceneManager.LoadScene(targetScene[4]);
             }
             else {
-                SceneManager.LoadScene(targetScene[3].name);
+                SceneManager.LoadScene(targetScene[3]);
 
             }
         }
         else { 
-            SceneManager.LoadScene(targetScene[3].name);
+            SceneManager.LoadScene(targetScene[3]);
         }
     }  
 
@@ -51,22 +52,22 @@ public class SceneTransition : MonoBehaviour
         {
             if (keyController.StarKey)
             {
-                SceneManager.LoadScene(targetScene[6].name);
+                SceneManager.LoadScene(targetScene[6]);
             }
             else
             {
-                SceneManager.LoadScene(targetScene[5].name);
+                SceneManager.LoadScene(targetScene[5]);
             }
         }
         else
         {
-            SceneManager.LoadScene(targetScene[5].name);
+            SceneManager.LoadScene(targetScene[5]);
         }
 
     }
     
     public void ExitToLevel3Complete()
     {
-        SceneManager.LoadScene(targetScene[6].name);
+        SceneManager.LoadScene(targetScene[6]);
     }
 }

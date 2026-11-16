@@ -951,6 +951,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[0]'
+      value: DoorLevel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[1]'
+      value: LeftClutterWallLvl2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[2]'
+      value: RightClutterWallLvl2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[3]'
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[4]'
+      value: Level2 Complete
+      objectReference: {fileID: 0}
     - target: {fileID: 8637625354327279303, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: m_Name
       value: Scene Transitioner

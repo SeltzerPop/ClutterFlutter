@@ -343,24 +343,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: 'targetScene.Array.data[0]'
-      value: 
-      objectReference: {fileID: 102900000, guid: f52896148069a0045a071fc4d621fa49, type: 3}
+      value: Level3 Door
+      objectReference: {fileID: 0}
     - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: 'targetScene.Array.data[1]'
-      value: 
-      objectReference: {fileID: 102900000, guid: a5b3f21e622c0ee459a1580816b656b6, type: 3}
+      value: Level3 Left Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: 'targetScene.Array.data[2]'
-      value: 
-      objectReference: {fileID: 102900000, guid: ca32638e4da81284c9077ac9ac178fa4, type: 3}
+      value: Level3 Right Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[3]'
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
+      propertyPath: 'targetScene.Array.data[4]'
+      value: Level2 Complete
+      objectReference: {fileID: 0}
     - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: 'targetScene.Array.data[5]'
-      value: 
-      objectReference: {fileID: 102900000, guid: 23b3e78571e83324ca864e06d8130093, type: 3}
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 3875783396926408694, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: 'targetScene.Array.data[6]'
-      value: 
-      objectReference: {fileID: 102900000, guid: b5c388080a8830040a625f478b02f677, type: 3}
+      value: Level3 Complete
+      objectReference: {fileID: 0}
     - target: {fileID: 8637625354327279303, guid: f0ac82bb172d8fa4fadafbe7aefd11df, type: 3}
       propertyPath: m_Name
       value: Scene Transitioner

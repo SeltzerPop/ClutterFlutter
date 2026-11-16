@@ -331,9 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
   targetScene:
-  - {fileID: 102900000, guid: f52896148069a0045a071fc4d621fa49, type: 3}
-  - {fileID: 102900000, guid: a5b3f21e622c0ee459a1580816b656b6, type: 3}
-  - {fileID: 102900000, guid: ca32638e4da81284c9077ac9ac178fa4, type: 3}
+  - Level3 Door
+  - Level3 Left Wall
+  - Level3 Right Wall
   keyController: {fileID: 0}
 --- !u!4 &412592360
 Transform:
