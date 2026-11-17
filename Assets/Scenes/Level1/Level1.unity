@@ -315,6 +315,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1967725128}
     m_Modifications:
     - target: {fileID: 1091449450773271001, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091449450773271001, guid: 399c4de2f7d8f3d43a0dc390350c1003, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -969,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.31, y: 6.26}
+  m_AnchoredPosition: {x: 9.05, y: 5.3596}
   m_SizeDelta: {x: 75.652, y: 4.5201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &844872510

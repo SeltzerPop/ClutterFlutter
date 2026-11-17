@@ -8,6 +8,8 @@ public class KeyAnimation : MonoBehaviour
 
     public DraggingController keyController;
     Animator animator;
+    public AudioSource audioSource;
+    public AudioClip clip;
     ParticleSystem particlsystem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,13 +28,16 @@ public class KeyAnimation : MonoBehaviour
     {
         if (keyController.keyHit)
         {
+            audioSource.PlayOneShot(clip);
+
             KeyControllerCollect();
         }
     }
 
     void KeyControllerCollect() {
         
-           StartCoroutine(KeyPulseAnimation());
+        StartCoroutine(KeyPulseAnimation());
+        //StartCoroutine(PlayTwinkle());
 
     }
 
@@ -42,6 +47,11 @@ public class KeyAnimation : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         keyController.keyHit = false;
+
+    }
+
+    IEnumerator PlayTwinkle() {
+        yield return new WaitForSeconds(0.2f);
 
     }
 }

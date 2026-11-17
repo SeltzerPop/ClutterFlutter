@@ -15,6 +15,7 @@ public class MoveBackToOrigin : MonoBehaviour
     public DraggingController draggingController;
     public bool grabbedItem = false;
     GameObject currentCollisionOBJ;
+    Vector3 currentScale;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,18 +58,25 @@ public class MoveBackToOrigin : MonoBehaviour
 
     void Update()
     {
-        float speed = 5f * Time.deltaTime; // set speed for movement
+        float speed = 10f * Time.deltaTime; // set speed for movement
 
         for (int i = 0; i < moveableObjects.Count; i++)
         {
             //get current colliding object and store in variable when rraycast is hit and mouse button is pressed
-            if (draggingController.hit && Input.GetMouseButtonDown(0)) { 
-                currentCollisionOBJ = draggingController.hit.collider.gameObject;
+            if (draggingController.hit){
+                if (Input.GetMouseButtonDown(0))
+                {
+                    currentCollisionOBJ = draggingController.hit.collider.gameObject;
+                    StartCoroutine(PopAnimation());
+                }
+                if (Input.GetMouseButtonUp(0)) {
+                    StartCoroutine(ReturnScale());
+
+                }
             }
 
             if (Input.GetMouseButtonUp(0) && moveableObjects[i].localPosition != originalPosition[i])
             {
-
                 grabbedItem = true;
                
             }
@@ -98,7 +106,18 @@ public class MoveBackToOrigin : MonoBehaviour
             }
         }
     }
-    
 
+
+    IEnumerator PopAnimation() {
+        currentCollisionOBJ.transform.localScale *= 1.01f;
+        yield return new WaitForSeconds(0.2f);
+        
+        
+    }
+
+    IEnumerator ReturnScale() {
+        currentCollisionOBJ.transform.localScale /= 1.01f;
+        yield return new WaitForSeconds(0.2f);
+    }
 }
 
