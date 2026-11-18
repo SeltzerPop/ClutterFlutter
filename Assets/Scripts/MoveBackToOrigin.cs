@@ -1,9 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.Rendering;
-using Unity.VisualScripting;
-using System.Net;
 
 public class MoveBackToOrigin : MonoBehaviour
 {
@@ -16,6 +13,8 @@ public class MoveBackToOrigin : MonoBehaviour
     public bool grabbedItem = false;
     GameObject currentCollisionOBJ;
     Vector3 currentScale;
+
+    public GameObject targetKey;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -90,7 +89,11 @@ public class MoveBackToOrigin : MonoBehaviour
             if (grabbedItem && currentCollisionOBJ.name == moveableObjects[i].name) {
 
                 //change covering game object over key 's collider very small so player can select the key. 
-                if (coveringGameObject != null && moveableObjects[i].name == coveringGameObject.name) moveableObjects[i].GetComponent<BoxCollider2D>().size = Vector3.one/4f;
+                if (coveringGameObject != null && moveableObjects[i].name == coveringGameObject.name)
+                {
+                    moveableObjects[i].GetComponent<BoxCollider2D>().size = Vector3.one / 4f;
+                    if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.one*5;
+                }
                 
                 moveableObjects[i].localPosition = Vector3.MoveTowards(moveableObjects[i].localPosition, originalPosition[i], speed);
 

@@ -3127,6 +3127,7 @@ MonoBehaviour:
   surroundKeyPosition: {fileID: 522071896}
   draggingController: {fileID: 0}
   grabbedItem: 0
+  targetKey: {fileID: 1596621907}
 --- !u!1 &1254470899
 GameObject:
   m_ObjectHideFlags: 0

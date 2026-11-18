@@ -6833,6 +6833,7 @@ MonoBehaviour:
   surroundKeyPosition: {fileID: 836664942}
   draggingController: {fileID: 0}
   grabbedItem: 0
+  targetKey: {fileID: 6831948}
 --- !u!1 &708952631
 GameObject:
   m_ObjectHideFlags: 0
