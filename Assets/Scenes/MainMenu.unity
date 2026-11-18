@@ -283,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250834854}
   - component: {fileID: 250834853}
+  - component: {fileID: 250834855}
   m_Layer: 0
   m_Name: MainMenuLogo_0
   m_TagString: Untagged
@@ -364,6 +365,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250834855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250834852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0dade047ae6e0458fac2269f6521fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  controller: {fileID: 0}
 --- !u!1 &412190980
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +447,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2297765206176238562}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1076,6 +1090,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+--- !u!20 &2297765206176238562 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1286758710644120707, guid: 751e6b0b355e4474e9f793cea9440c76, type: 3}
+  m_PrefabInstance: {fileID: 2297765206176238561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
