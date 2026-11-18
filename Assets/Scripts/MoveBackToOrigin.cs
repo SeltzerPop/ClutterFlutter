@@ -50,6 +50,7 @@ public class MoveBackToOrigin : MonoBehaviour
                     }
                 }
             }
+            if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.zero;
         }
 
 

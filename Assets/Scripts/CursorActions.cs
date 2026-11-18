@@ -72,13 +72,14 @@ public class CursorActions : MonoBehaviour
                 {
                     keyController.SunKeyCollect();
                 }
+
+                if (SceneManager.GetSceneByName("Level3 Right Wall").isLoaded && draggableController.keyHit && !keyController.StarKey) {
+                    keyController.StarKeyCollect();
+                }
             }
         }
        
-        //if (EventSystem.current.)
-        //{
-        //    print("Working");
-        //}
+  
 
     }
 }

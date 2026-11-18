@@ -66,8 +66,12 @@ public class SceneTransition : MonoBehaviour
 
     }
     
-    public void ExitToLevel3Complete()
+    public void ExitToEndScene()
     {
-        SceneManager.LoadScene(targetScene[6]);
+        SceneManager.LoadScene(targetScene[7]);
+    }
+
+    public void BackToMainMenu() {
+        SceneManager.LoadScene(targetScene[0]);
     }
 }
