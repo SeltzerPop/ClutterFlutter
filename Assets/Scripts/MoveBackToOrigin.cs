@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class MoveBackToOrigin : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class MoveBackToOrigin : MonoBehaviour
     public bool grabbedItem = false;
     GameObject currentCollisionOBJ;
     Vector3 currentScale;
+    public bool movedAway;
 
     public GameObject targetKey;
 
@@ -50,7 +52,7 @@ public class MoveBackToOrigin : MonoBehaviour
                     }
                 }
             }
-            if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.zero;
+            //if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.zero;
         }
 
 
@@ -87,40 +89,53 @@ public class MoveBackToOrigin : MonoBehaviour
             /*
              * if current colliding obj stored in raycast matches to the moved object name, move the object back to it's origin point 
              */
-            if (grabbedItem && currentCollisionOBJ.name == moveableObjects[i].name) {
+            if (grabbedItem) {
 
-                //change covering game object over key 's collider very small so player can select the key. 
-                if (coveringGameObject != null && moveableObjects[i].name == coveringGameObject.name)
+                //change covering game object over key 's collider very small so player can select the treasure chest. 
+                if (coveringGameObject != null && currentCollisionOBJ.name == coveringGameObject.name &&
+                    coveringGameObject.transform.localPosition == surroundKeyPosition.position)
                 {
+                    print("hello?");
                     moveableObjects[i].GetComponent<BoxCollider2D>().size = Vector3.one / 4f;
-                    if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.one*5;
+                    movedAway = true;
+                   
+                   // if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.one*5;
                 }
-                
-                moveableObjects[i].localPosition = Vector3.MoveTowards(moveableObjects[i].localPosition, originalPosition[i], speed);
+
+                if (moveableObjects[i].name == currentCollisionOBJ.name)
+                {
+                    moveableObjects[i].localPosition = Vector3.MoveTowards(moveableObjects[i].localPosition, originalPosition[i], speed);
+                }
 
             }
 
             //if currently moving object is close to it's original position, stay at original position point
 
-            if (grabbedItem && Vector3.Distance(moveableObjects[i].localPosition, originalPosition[i]) < 0.001f)
-            {
-                moveableObjects[i].localPosition = originalPosition[i];
-               
-               
+            if (grabbedItem) {
+               if (Vector3.Distance(moveableObjects[i].localPosition, originalPosition[i]) < 0.001f)
+                {
+                    moveableObjects[i].localPosition = originalPosition[i];
+                    
+                }
+                //if (coveringGameObject.name == moveableObjects[i].name) {
+                //    if (moveableObjects[i].localPosition == originalPosition[i]) {
+                //        movedAway = true;
+                //    }
+                //}
             }
         }
     }
 
 
     IEnumerator PopAnimation() {
-        currentCollisionOBJ.transform.localScale *= 1.01f;
+        if (currentCollisionOBJ != null) currentCollisionOBJ.transform.localScale *= 1.01f;
         yield return new WaitForSeconds(0.2f);
         
         
     }
 
     IEnumerator ReturnScale() {
-        currentCollisionOBJ.transform.localScale /= 1.01f;
+        if (currentCollisionOBJ != null) currentCollisionOBJ.transform.localScale /= 1.01f;
         yield return new WaitForSeconds(0.2f);
     }
 }

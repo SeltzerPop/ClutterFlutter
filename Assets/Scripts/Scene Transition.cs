@@ -1,12 +1,14 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class SceneTransition : MonoBehaviour
 {
-    
+
     public string[] targetScene;
     public KeyController keyController;
-
+    public MoveBackToOrigin moveBackToOrigin;
+    public Button treasureChestButton;
     void Start()
     {
         if (GameObject.Find("Key Controller") != false)
@@ -14,37 +16,44 @@ public class SceneTransition : MonoBehaviour
             keyController = GameObject.Find("Key Controller").GetComponent<KeyController>();
         }
     }
+
+
     public void DoorScene()
     {
-        
-       SceneManager.LoadScene(targetScene[0]); 
+
+        SceneManager.LoadScene(targetScene[0]);
     }
 
-    public void LeftClutterWall() {
+    public void LeftClutterWall()
+    {
         SceneManager.LoadScene(targetScene[1]);
 
     }
 
-    public void RightClutterWall() {
+    public void RightClutterWall()
+    {
         SceneManager.LoadScene(targetScene[2]);
     }
 
-    public void ExitToLevel2 (){ 
+    public void ExitToLevel2()
+    {
         if (keyController != null)
         {
             if (keyController.SunKey)
             {
                 SceneManager.LoadScene(targetScene[4]);
             }
-            else {
+            else
+            {
                 SceneManager.LoadScene(targetScene[3]);
 
             }
         }
-        else { 
+        else
+        {
             SceneManager.LoadScene(targetScene[3]);
         }
-    }  
+    }
 
     public void ExitToLevel3()
     {
@@ -65,13 +74,21 @@ public class SceneTransition : MonoBehaviour
         }
 
     }
-    
+
     public void ExitToEndScene()
     {
         SceneManager.LoadScene(targetScene[7]);
     }
 
-    public void BackToMainMenu() {
+    public void BackToMainMenu()
+    {
         SceneManager.LoadScene(targetScene[0]);
     }
+
+    public void EnterSamplePuzzle()
+    {
+        SceneManager.LoadScene(targetScene[7]);
+
+    }
+
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DraggingController : MonoBehaviour
 {
@@ -35,22 +36,23 @@ public class DraggingController : MonoBehaviour
                 {
 
                     //rotate object on the z axis
-                    if (Input.mousePosition.x < hit.transform.position.x)
-                    {
+                   
+                       if (SceneManager.GetActiveScene().name != "Sample Puzzle")
+                            {
+                                hit.transform.localEulerAngles += rotation; //rotate to the left
+                       }
 
-
-                        hit.transform.localEulerAngles += rotation; //rotate to the left
-
-                    }
-                    else if (Input.mousePosition.x > hit.transform.position.x)
-                    {
-
-                        hit.transform.localEulerAngles -= rotation;
-                    }
+                        if (SceneManager.GetSceneByName("Sample Puzzle 1").isLoaded ||
+                            SceneManager.GetSceneByName("Sample Puzzle 2").isLoaded ||
+                            SceneManager.GetSceneByName("Sample Puzzle 3").isLoaded) {
+                            print("here");
+                            hit.transform.localEulerAngles += new Vector3 (0,0,45);
+                        }
+                    
+                    
+                   
                 }
-                else { 
-                    hit.transform.localEulerAngles = new Vector3(0, 0, 0); //reset rotation if not a rotatable object
-                }
+                
                 if (hit.transform.CompareTag("Can Move"))
                 {
                     dragging = hit.transform;

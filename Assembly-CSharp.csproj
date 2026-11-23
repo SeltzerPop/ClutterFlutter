@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\KeyAnimation.cs" />
+    <Compile Include="Assets\Scenes\ToggleText.cs" />
     <Compile Include="Assets\Scripts\KeyController.cs" />
     <Compile Include="Assets\Scripts\Dragging Controller.cs" />
     <Compile Include="Assets\Scripts\Main Menu\CameraController.cs" />
@@ -71,12 +72,14 @@
     <Compile Include="Assets\Scripts\Main Menu\QuitButtonController.cs" />
     <Compile Include="Assets\Scripts\MoveBackToOrigin.cs" />
     <Compile Include="Assets\Scripts\Scene Transition.cs" />
+    <Compile Include="Assets\Scenes\Sample Puzzle Scene\Scripts\PuzzleController.cs" />
     <Compile Include="Assets\Scripts\ScrollController.cs" />
     <Compile Include="Assets\Scripts\Main Menu\PlayButtonController.cs" />
     <Compile Include="Assets\Scripts\CursorController.cs" />
     <Compile Include="Assets\Scripts\Level1\LevelChange.cs" />
     <Compile Include="Assets\Scripts\Level1\Level1ClutterWallController.cs" />
     <Compile Include="Assets\Scripts\DoNotDestroy.cs" />
+    <Compile Include="Assets\Scenes\Sample Puzzle Scene\Scripts\InteractableTreasureChest.cs" />
     <Compile Include="Assets\Scripts\Main Menu\ResetBooleans.cs" />
     <Compile Include="Assets\Scripts\Level 3\ExitToMain.cs" />
     <Compile Include="Assets\Scripts\Level 2\Level2ClutterWallController.cs" />
