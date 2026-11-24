@@ -98,9 +98,12 @@ public class MoveBackToOrigin : MonoBehaviour
                     print("hello?");
                     moveableObjects[i].GetComponent<BoxCollider2D>().size = Vector3.one / 4f;
                     movedAway = true;
-                   
-                   // if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.one*5;
+
+                    // if (targetKey != null) targetKey.GetComponent<BoxCollider2D>().size = Vector3.one*5;
                 }
+                
+
+
 
                 if (moveableObjects[i].name == currentCollisionOBJ.name)
                 {
